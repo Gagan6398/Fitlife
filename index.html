@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife - Health & Fitness</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#blogs">Blogs</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#faq">FAQs</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Get Fit, Stay Healthy</h1>
+            <p>Your journey to a healthier life starts here.</p>
+            <button>Start Now</button>
+        </div>
+        <!-- Sticker (Pure SVG & CSS) -->
+        <div class="sticker">
+            <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="lightgreen" />
+                <text x="50" y="55" font-size="12" text-anchor="middle" fill="black">💪 FitLife</text>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>Why Choose FitLife?</h2>
+        <p>Our scientifically designed training & diet plans help you achieve your fitness goals efficiently.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <div class="sticker">🏋️‍♂️</div>
+                <h3>Personal Training</h3>
+                <p>Get expert coaching for better results.</p>
+            </div>
+            <div class="service-card">
+                <div class="sticker">🥗</div>
+                <h3>Diet Plans</h3>
+                <p>Customized meal plans for weight loss & muscle gain.</p>
+            </div>
+            <div class="service-card">
+                <div class="sticker">🧘‍♀️</div>
+                <h3>Yoga & Meditation</h3>
+                <p>Relax & refresh your mind and body.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <section id="blogs" class="blogs">
+        <h2>Daily Fitness Tips</h2>
+        <article>
+            <h3>5 Best Morning Exercises</h3>
+            <p>Start your day with these effective workouts to stay active and healthy.</p>
+        </article>
+        <article>
+            <h3>Healthy Eating Habits</h3>
+            <p>Learn the right food choices to maintain a balanced diet.</p>
+        </article>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial">
+            <div class="sticker">😊</div>
+            <p>"FitLife changed my life! I lost 10kg in 3 months." - Rohan</p>
+        </div>
+        <div class="testimonial">
+            <div class="sticker">🔥</div>
+            <p>"The trainers are amazing! Highly recommended." - Priya</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <details>
+            <summary>How can I lose weight fast?</summary>
+            <p>Follow a balanced diet and regular exercise for sustainable weight loss.</p>
+        </details>
+        <details>
+            <summary>What is the best time to work out?</summary>
+            <p>Morning workouts are ideal, but consistency matters the most.</p>
+        </details>
+    </section>
+
+    <!-- BMI Calculator -->
+    <section id="bmi" class="bmi">
+        <h2>Check Your BMI</h2>
+        <input type="number" id="weight" placeholder="Enter Weight (kg)">
+        <input type="number" id="height" placeholder="Enter Height (m)">
+        <button onclick="calculateBMI()">Calculate</button>
+        <p id="bmi-result"></p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 FitLife. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function calculateBMI() {
+            let weight = document.getElementById('weight').value;
+            let height = document.getElementById('height').value;
+            if(weight > 0 && height > 0) {
+                let bmi = (weight / (height * height)).toFixed(2);
+                document.getElementById('bmi-result').innerText = "Your BMI: " + bmi;
+            } else {
+                document.getElementById('bmi-result').innerText = "Enter valid values.";
+            }
+        }
+    </script>
+
+</body>
+</html>
